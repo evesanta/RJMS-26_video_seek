@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  .leftSide {
+    width: 60%;
+    section {
+      width: 100%;
+      video {
+        width: 100%;
+      }
+    }
+  }
+  .rightSide {
+    width: 40%;
+    .buttons {
+      margin-left: 20px;
+    }
+  }
+}

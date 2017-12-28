@@ -1,0 +1,14 @@
+.container {
+  display: flex; }
+  .container .leftSide {
+    width: 60%; }
+    .container .leftSide section {
+      width: 100%; }
+      .container .leftSide section video {
+        width: 100%; }
+  .container .rightSide {
+    width: 40%; }
+    .container .rightSide .buttons {
+      margin-left: 20px; }
+
+/*# sourceMappingURL=main.css.map */
