@@ -6,9 +6,28 @@
       width: 100%; }
       .container .leftSide section video {
         width: 100%; }
+    .container .leftSide .comment {
+      margin-top: 100px;
+      height: 200px;
+      background-color: aliceblue; }
   .container .rightSide {
-    width: 40%; }
-    .container .rightSide .buttons {
-      margin-left: 20px; }
+    width: 40%;
+    margin-left: 10px; }
+    .container .rightSide ol {
+      list-style: none;
+      border: 1px solid black;
+      padding-left: 10px; }
+      .container .rightSide ol li {
+        border-bottom: 1px solid black;
+        margin-top: 10px;
+        cursor: pointer; }
+        .container .rightSide ol li:first-child {
+          border-top: 1px solid black; }
+        .container .rightSide ol li:hover {
+          background-color: antiquewhite; }
+        .container .rightSide ol li .seekMin {
+          color: cornflowerblue; }
+        .container .rightSide ol li .seekTitle {
+          font-weight: bold; }
 
 /*# sourceMappingURL=main.css.map */

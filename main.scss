@@ -8,11 +8,36 @@
         width: 100%;
       }
     }
+    .comment {
+      margin-top: 100px;
+      height: 200px;
+      background-color: aliceblue;
+    }
   }
   .rightSide {
     width: 40%;
-    .buttons {
-      margin-left: 20px;
+    margin-left: 10px;
+    ol {
+      list-style: none;
+      border: 1px solid black;
+      padding-left: 10px;
+      li {
+        border-bottom: 1px solid black;
+        margin-top: 10px;
+        cursor: pointer;
+        &:first-child {
+          border-top: 1px solid black;
+        }
+        &:hover {
+          background-color: antiquewhite;
+        }
+        .seekMin {
+          color: cornflowerblue;
+        }
+        .seekTitle {
+          font-weight: bold;
+        }
+      }
     }
   }
 }

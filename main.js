@@ -6,7 +6,12 @@ $(function () {
   const main_video = document.getElementById("video");
 
   for (let i = 0; i < video_data.length; i++) {
-    const li = $('<li></li>').text(video_data[i][1]).on('click', function () {
+    const li = $('<li></li>')
+    const in_li = $('<span></span>').text('#' + ((video_data[i][0] / 60) | 0) + ":" + ('00' + video_data[i][0] % 60).slice(-2) + "    ").addClass('seekMin')
+
+    const li_title = $('<span></span>').text(video_data[i][1]).addClass('seekTitle')
+
+    li.append(in_li).append(li_title).on('click', function () {
       main_video.currentTime = video_data[i][0];
     });
     $('.seekList').append(li)
@@ -22,6 +27,6 @@ $(function () {
   });
 
 
-  $('.seekList').append(seek)
+  //$('.seekList').append(seek)
 
 });
