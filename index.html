@@ -7,7 +7,7 @@
 
   <meta charset="utf-8" />
   <script src="http://unpkg.com/vue/dist/vue.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-default/index.css">
+  <link rel="stylesheet" href="https://unpkg.com/element-ui@2.0.10/lib/theme-chalk/index.css">
   <script src="http://unpkg.com/element-ui/lib/index.js"></script>
   <script src="http://unpkg.com/element-ui/lib/umd/locale/ja.js"></script>
 
@@ -16,6 +16,8 @@
 </head>
 
 <body>
+
+
 
   <div id="app">
 
@@ -32,7 +34,14 @@
           </section>
         </div>
         <div class="right">
-          asfd
+
+          <el-table :data="tableData2" height="320" style="width: 100%">
+            <el-table-column prop="time" label="時間" width="180">
+            </el-table-column>
+            <el-table-column prop="name" label="チャプター" width="240">
+            </el-table-column>
+          </el-table>
+
         </div>
 
       </el-main>
