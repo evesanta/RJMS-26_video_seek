@@ -35,6 +35,7 @@ header {
     margin-right: 1%;
     margin-left: 10px;
     border: 1px solid black;
+    border-radius: 8px;
     table {
       margin: 10px auto;
       width: 96%;
@@ -61,28 +62,10 @@ header {
         &:hover {
           background-color: #AFC;
         }
+        transition: all 0.5s 0s ease;
       }
-    }
-    ol {
-      list-style: none;
-      border: 1px solid black;
-      padding-left: 10px;
-      li {
-        border-bottom: 1px solid black;
-        margin-top: 10px;
-        cursor: pointer;
-        &:first-child {
-          border-top: 1px solid black;
-        }
-        &:hover {
-          background-color: #AFC;
-        }
-        .seekMin {
-          color: $mainColor;
-        }
-        .seekTitle {
-          font-weight: bold;
-        }
+      .nowPlay {
+        background-color: #FDD;
       }
     }
   }

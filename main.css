@@ -26,7 +26,8 @@ header {
     width: 40%;
     margin-right: 1%;
     margin-left: 10px;
-    border: 1px solid black; }
+    border: 1px solid black;
+    border-radius: 8px; }
     .container .rightSide table {
       margin: 10px auto;
       width: 96%;
@@ -42,25 +43,13 @@ header {
         background-color: #CCC; }
       .container .rightSide table td {
         padding: 10px 5px; }
-      .container .rightSide table tr:not(:first-child) {
-        cursor: pointer; }
-      .container .rightSide table tr:hover {
-        background-color: #AFC; }
-    .container .rightSide ol {
-      list-style: none;
-      border: 1px solid black;
-      padding-left: 10px; }
-      .container .rightSide ol li {
-        border-bottom: 1px solid black;
-        margin-top: 10px;
-        cursor: pointer; }
-        .container .rightSide ol li:first-child {
-          border-top: 1px solid black; }
-        .container .rightSide ol li:hover {
+      .container .rightSide table tr {
+        transition: all 0.5s 0s ease; }
+        .container .rightSide table tr:not(:first-child) {
+          cursor: pointer; }
+        .container .rightSide table tr:hover {
           background-color: #AFC; }
-        .container .rightSide ol li .seekMin {
-          color: #3C7; }
-        .container .rightSide ol li .seekTitle {
-          font-weight: bold; }
+      .container .rightSide table .nowPlay {
+        background-color: #FDD; }
 
 /*# sourceMappingURL=main.css.map */
