@@ -1,6 +1,22 @@
+$mainColor: #3C7;
+body {
+  margin: 0;
+}
+
+header {
+  background-color: $mainColor;
+  color: white;
+  h1 {
+    margin-top: 0;
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+}
+
 .container {
   display: flex;
   .leftSide {
+    padding: 5px;
     width: 60%;
     section {
       width: 100%;
@@ -16,7 +32,37 @@
   }
   .rightSide {
     width: 40%;
+    margin-right: 1%;
     margin-left: 10px;
+    border: 1px solid black;
+    table {
+      margin: 10px auto;
+      width: 96%;
+      border: 1px solid black;
+      border-collapse: collapse;
+      th,
+      td {
+        border: 1px solid black;
+      }
+      .time {
+        width: 15%;
+      }
+      th {
+        height: 40px;
+        background-color: #CCC;
+      }
+      td {
+        padding: 10px 5px;
+      }
+      tr {
+        &:not(:first-child) {
+          cursor: pointer;
+        }
+        &:hover {
+          background-color: #AFC;
+        }
+      }
+    }
     ol {
       list-style: none;
       border: 1px solid black;
@@ -29,10 +75,10 @@
           border-top: 1px solid black;
         }
         &:hover {
-          background-color: antiquewhite;
+          background-color: #AFC;
         }
         .seekMin {
-          color: cornflowerblue;
+          color: $mainColor;
         }
         .seekTitle {
           font-weight: bold;

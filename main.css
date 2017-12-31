@@ -1,6 +1,18 @@
+body {
+  margin: 0; }
+
+header {
+  background-color: #3C7;
+  color: white; }
+  header h1 {
+    margin-top: 0;
+    padding-top: 10px;
+    padding-left: 10px; }
+
 .container {
   display: flex; }
   .container .leftSide {
+    padding: 5px;
     width: 60%; }
     .container .leftSide section {
       width: 100%; }
@@ -12,7 +24,28 @@
       background-color: aliceblue; }
   .container .rightSide {
     width: 40%;
-    margin-left: 10px; }
+    margin-right: 1%;
+    margin-left: 10px;
+    border: 1px solid black; }
+    .container .rightSide table {
+      margin: 10px auto;
+      width: 96%;
+      border: 1px solid black;
+      border-collapse: collapse; }
+      .container .rightSide table th,
+      .container .rightSide table td {
+        border: 1px solid black; }
+      .container .rightSide table .time {
+        width: 15%; }
+      .container .rightSide table th {
+        height: 40px;
+        background-color: #CCC; }
+      .container .rightSide table td {
+        padding: 10px 5px; }
+      .container .rightSide table tr:not(:first-child) {
+        cursor: pointer; }
+      .container .rightSide table tr:hover {
+        background-color: #AFC; }
     .container .rightSide ol {
       list-style: none;
       border: 1px solid black;
@@ -24,9 +57,9 @@
         .container .rightSide ol li:first-child {
           border-top: 1px solid black; }
         .container .rightSide ol li:hover {
-          background-color: antiquewhite; }
+          background-color: #AFC; }
         .container .rightSide ol li .seekMin {
-          color: cornflowerblue; }
+          color: #3C7; }
         .container .rightSide ol li .seekTitle {
           font-weight: bold; }
 
