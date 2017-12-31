@@ -18,16 +18,42 @@ header {
   .leftSide {
     padding: 5px;
     width: 60%;
+    h3 {
+      margin-top: 3px;
+      margin-left: 3px;
+    }
     section {
       width: 100%;
       video {
         width: 100%;
       }
+      ul {
+        list-style: none;
+        display: flex;
+        margin-top: 0;
+        li {
+          margin-left: 3px;
+          width: 40px;
+          height: 40px;
+          line-height: 40px;
+          background-color: beige;
+          text-align: center;
+          box-shadow: 1px 1px 1px;
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+    .code {
+      margin-top: 20px;
+      height: 100px;
+      border: 1px black solid;
     }
     .comment {
-      margin-top: 100px;
-      height: 200px;
-      background-color: aliceblue;
+      margin-top: 20px;
+      height: 100px;
+      border: 1px black solid;
     }
   }
   .rightSide {
@@ -65,8 +91,27 @@ header {
         transition: all 0.5s 0s ease;
       }
       .nowPlay {
-        background-color: #FDD;
+        color: $mainColor;
       }
+    }
+  }
+}
+
+#app {
+  .el-main {
+    margin-top: 10px;
+    display: flex;
+    .left {
+      width: 60%;
+      section {
+        width: 100%;
+        video {
+          width: 100%;
+        }
+      }
+    }
+    .right {
+      width: 40%;
     }
   }
 }

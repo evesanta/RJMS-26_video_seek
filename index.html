@@ -4,10 +4,44 @@
 <head>
   <link rel="stylesheet" type="text/css" href="main.css">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script type="text/javascript" src="main.js"></script>
+
+  <meta charset="utf-8" />
+  <script src="http://unpkg.com/vue/dist/vue.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-default/index.css">
+  <script src="http://unpkg.com/element-ui/lib/index.js"></script>
+  <script src="http://unpkg.com/element-ui/lib/umd/locale/ja.js"></script>
+
+
+
 </head>
 
 <body>
+
+  <div id="app">
+
+
+    <el-container>
+      <el-header>
+        <h1>{{ title }}</h1>
+      </el-header>
+
+      <el-main>
+        <div class="left">
+          <section>
+            <video id="video" controls src="IMG_4875.MOV" autobuffer></video>
+          </section>
+        </div>
+        <div class="right">
+          asfd
+        </div>
+
+      </el-main>
+    </el-container>
+  </div>
+
+
+
+  <!--
   <header>
     <h1>ハードウェア最終課題</h1>
 
@@ -16,15 +50,21 @@
     <div class="leftSide">
       <section>
         <video id="video" controls src="IMG_4875.MOV" autobuffer></video>
+        <ul class="buttons">
+          <li>始</li>
+          <li>T</li>
+          <li>S</li>
+        </ul>
       </section>
+      <div class="code">
+        <h3>補足資料・ソースコード</h3>
+      </div>
       <div class="comment">
-        ここに「コメント」・「質問」・「いいねボタン」とかを入れたい！
+        <h3>コメント・質問</h3>
       </div>
     </div>
 
     <div class="rightSide">
-
-
       <table class="chapterList">
         <tr>
           <th class="time">時間</th>
@@ -33,9 +73,11 @@
 
       </table>
     </div>
-
-
   </div>
+-->
+
+
+  <script type="text/javascript" src="main.js"></script>
 </body>
 
 </html>
