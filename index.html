@@ -42,6 +42,15 @@
             </el-table-column>
           </el-table>
 
+          <table class="table1">
+            <tr v-for="item in tableData2" :class="{ 'nowPlay': item.nowPlay }">
+              <td>{{ item.time }}</td>
+              <td>{{ item.name }}</td>
+            </tr>
+          </table>
+
+          <el-button type="primary" round v-on:click="tableData2[3].nowPlay=true">Primary</el-button>
+          <el-button type="primary" round v-on:click="say()">Primary</el-button>
         </div>
 
       </el-main>
@@ -55,29 +64,29 @@
     <h1>ハードウェア最終課題</h1>
 
   </header>
-  <div class="container">
-    <div class="leftSide">
+  <div class=" container ">
+    <div class="leftSide ">
       <section>
-        <video id="video" controls src="IMG_4875.MOV" autobuffer></video>
-        <ul class="buttons">
+        <video id="video " controls src="IMG_4875.MOV " autobuffer></video>
+        <ul class="buttons ">
           <li>始</li>
           <li>T</li>
           <li>S</li>
         </ul>
       </section>
-      <div class="code">
+      <div class="code ">
         <h3>補足資料・ソースコード</h3>
       </div>
-      <div class="comment">
+      <div class="comment ">
         <h3>コメント・質問</h3>
       </div>
     </div>
 
-    <div class="rightSide">
-      <table class="chapterList">
+    <div class="rightSide ">
+      <table class="chapterList ">
         <tr>
-          <th class="time">時間</th>
-          <th class="chapter">チャプター</th>
+          <th class="time ">時間</th>
+          <th class="chapter ">チャプター</th>
         </tr>
 
       </table>
@@ -86,7 +95,7 @@
 -->
 
 
-  <script type="text/javascript" src="main.js"></script>
+  <script type="text/javascript " src="main.js "></script>
 </body>
 
 </html>

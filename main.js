@@ -39,55 +39,33 @@ ELEMENT.locale(ELEMENT.lang.ja)
 
 var app = new Vue({
   el: '#app',
-  data() {
-    return {
-      tableData2: [{
-        time: '0:00',
-        name: '初めから'
-        }, {
-        time: '0:07',
-        name: '停止点灯'
-        }, {
-        time: '0:12',
-        name: 'カウントクリア'
-        }, {
-        time: '0:15',
-        name: '早送り'
-        }, {
-        time: '0:18',
-        name: '一致点灯'
-        }],
-      title: 'ハードウェア記述言語',
-      tableData3: [{
-        date: '2016-05-03',
-        name: 'Tom',
-        address: 'No. 189, Grove St, Los Angeles'
-        }, {
-        date: '2016-05-02',
-        name: 'Tom',
-        address: 'No. 189, Grove St, Los Angeles'
-        }, {
-        date: '2016-05-04',
-        name: 'Tom',
-        address: 'No. 189, Grove St, Los Angeles'
-        }, {
-        date: '2016-05-01',
-        name: 'Tom',
-        address: 'No. 189, Grove St, Los Angeles'
-        }, {
-        date: '2016-05-08',
-        name: 'Tom',
-        address: 'No. 189, Grove St, Los Angeles'
-        }, {
-        date: '2016-05-06',
-        name: 'Tom',
-        address: 'No. 189, Grove St, Los Angeles'
-        }, {
-        date: '2016-05-07',
-        name: 'Tom',
-        address: 'No. 189, Grove St, Los Angeles'
-        }],
-
+  methods: {
+    say: function (message) {
+      this.tableData2[3].nowPlay = true
     }
+  },
+  data: {
+    tableData2: [{
+      time: '0:00',
+      name: '初めから',
+      nowPlay: true
+        }, {
+      time: '0:07',
+      name: '停止点灯',
+      nowPlay: false
+        }, {
+      time: '0:12',
+      name: 'カウントクリア',
+      nowPlay: false
+        }, {
+      time: '0:15',
+      name: '早送り',
+      nowPlay: false
+        }, {
+      time: '0:18',
+      name: '一致点灯',
+      nowPlay: false
+        }],
+    title: 'ハードウェア記述言語',
   }
 })
