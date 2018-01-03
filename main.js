@@ -34,14 +34,20 @@
 //  //  $("tr:nth-child(2)").addClass('nowPlay')
 //});
 
+
+
 ELEMENT.locale(ELEMENT.lang.ja)
-
-
 var app = new Vue({
   el: '#app',
   methods: {
-    say: function (message) {
-      this.tableData2[3].nowPlay = true
+    say: function (index) {
+      this.tableData2.forEach(function (val, index, array) {
+        val.nowPlay = false
+      });
+      this.tableData2[index].nowPlay = true
+      video = document.getElementById("video");
+      const temp = this.tableData2[index].time.split(":")
+      video.currentTime = temp[0] * 60 + temp[1];
     }
   },
   data: {

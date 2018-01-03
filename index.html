@@ -43,7 +43,11 @@
           </el-table>
 
           <table class="table1">
-            <tr v-for="item in tableData2" :class="{ 'nowPlay': item.nowPlay }">
+            <tr>
+              <th>時間</th>
+              <th>チャプター</th>
+            </tr>
+            <tr v-for="(item, index) in tableData2" :class="{ 'nowPlay': item.nowPlay }" @click="say(index)">
               <td>{{ item.time }}</td>
               <td>{{ item.name }}</td>
             </tr>
