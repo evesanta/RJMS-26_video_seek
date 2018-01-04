@@ -93,7 +93,32 @@ header {
 .el-table .success-row {
   background: #f0f9eb; }
 
-.nowPlay {
-  color: #3C7; }
+.table1 {
+  border-collapse: collapse;
+  text-align: left;
+  line-height: 1.5;
+  width: 100%; }
+  .table1 thead th {
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    background-color: #EFE;
+    border-bottom: 3px solid #3C7; }
+  .table1 tbody {
+    cursor: pointer; }
+    .table1 tbody td {
+      padding: 10px;
+      vertical-align: top;
+      border-bottom: 1px solid #ccc; }
+    .table1 tbody tr {
+      opacity: 0.4;
+      font-size: 14px;
+      transition: all 0.5s 0s ease; }
+      .table1 tbody tr:hover {
+        background-color: #EFE;
+        opacity: 0.7; }
+    .table1 tbody .nowPlay {
+      color: #3C7;
+      opacity: 1; }
 
 /*# sourceMappingURL=main.css.map */

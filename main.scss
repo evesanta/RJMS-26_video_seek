@@ -126,6 +126,39 @@ header {
   background: #f0f9eb;
 }
 
-.nowPlay {
-  color: $mainColor;
+.table1 {
+  border-collapse: collapse;
+  text-align: left;
+  line-height: 1.5;
+  width: 100%;
+  thead {
+    th {
+      padding: 10px;
+      font-weight: bold;
+      vertical-align: top;
+      background-color: #EFE;
+      border-bottom: 3px solid $mainColor;
+    }
+  }
+  tbody {
+    cursor: pointer;
+    td {
+      padding: 10px;
+      vertical-align: top;
+      border-bottom: 1px solid #ccc;
+    }
+    tr {
+      opacity: 0.4;
+      font-size: 14px;
+      transition: all 0.5s 0s ease;
+      &:hover {
+        background-color: #EFE;
+        opacity: 0.7;
+      }
+    }
+    .nowPlay {
+      color: $mainColor;
+      opacity: 1;
+    }
+  }
 }

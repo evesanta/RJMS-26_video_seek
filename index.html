@@ -34,27 +34,23 @@
           </section>
         </div>
         <div class="right">
-
-          <el-table :data="tableData2" height="320" style="width: 100%">
-            <el-table-column prop="time" label="時間" width="180">
-            </el-table-column>
-            <el-table-column prop="name" label="チャプター" width="240">
-            </el-table-column>
-          </el-table>
-
-          <table class="table1">
-            <tr>
-              <th>時間</th>
-              <th>チャプター</th>
-            </tr>
+          <table class="table1 type09">
+            <thead>
+              <tr>
+                <th width="20%">時間</th>
+                <th width="80%">チャプター</th>
+              </tr>
+            </thead>
             <tr v-for="(item, index) in tableData2" :class="{ 'nowPlay': item.nowPlay }" @click="say(index)">
               <td>{{ item.time }}</td>
               <td>{{ item.name }}</td>
             </tr>
           </table>
 
-          <el-button type="primary" round v-on:click="tableData2[3].nowPlay=true">Primary</el-button>
-          <el-button type="primary" round v-on:click="say()">Primary</el-button>
+<!--
+<el-button type="primary" round v-on:click="tableData2[3].nowPlay=true">Primary</el-button>
+<el-button type="primary" round v-on:click="update()">Primary</el-button>
+-->
         </div>
 
       </el-main>

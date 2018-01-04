@@ -37,6 +37,8 @@
 
 
 ELEMENT.locale(ELEMENT.lang.ja)
+
+
 var app = new Vue({
   el: '#app',
   methods: {
@@ -45,33 +47,57 @@ var app = new Vue({
         val.nowPlay = false
       });
       this.tableData2[index].nowPlay = true
-      video = document.getElementById("video");
+      const video = document.getElementById("video");
       const temp = this.tableData2[index].time.split(":")
       video.currentTime = temp[0] * 60 + temp[1];
-    }
+    },
+    update: function (thisis = this) {
+      //console.log(this)
+      thisis.tableData2.forEach(function (val, index, array) {
+        const video = document.getElementById("video");
+        const temp = val.time.split(":")
+        const time = parseInt(temp[0], 10) * 60 + parseInt(temp[1], 10)
+        //console.log(array)
+        const nextTemp = index + 1 == array.length || array[index + 1].time.split(":")
+        const nextTime = parseInt(nextTemp[0], 10) * 60 + parseInt(nextTemp[1], 10)
+        //console.log(time);
+        val.nowPlay = false;
+        if (time <= video.currentTime && (index + 1 == array.length || video.currentTime < nextTime)) {
+          //console.log(index);
+          val.nowPlay = true;
+        }
+      });
+    },
   },
+  created: function () {
+    setInterval(this.update, 100)
+
+  },
+
   data: {
     tableData2: [{
       time: '0:00',
       name: '初めから',
       nowPlay: true
         }, {
-      time: '0:07',
+      time: '0:06',
       name: '停止点灯',
       nowPlay: false
         }, {
-      time: '0:12',
+      time: '0:11',
       name: 'カウントクリア',
       nowPlay: false
         }, {
-      time: '0:15',
+      time: '0:14',
       name: '早送り',
       nowPlay: false
         }, {
-      time: '0:18',
+      time: '0:17',
       name: '一致点灯',
       nowPlay: false
         }],
     title: 'ハードウェア記述言語',
   }
 })
+
+// this.app.$options.methods.update(this.app.$options.data)
